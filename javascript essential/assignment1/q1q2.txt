@@ -1,0 +1,44 @@
+Question 1
+What will the code below output to the console and why ?
+console.log(1 + "2" + "2"); 
+1 convert to "1", then concatenate with "2", we get "12", then concatenate with "2", we get "122"
+console.log(1 + +"2" + "2");
++"2" convert to 2, 1+2 = 3, 3 convert to "3", concatenate with "2", we get "32"
+console.log(1 + -"1" + "2");
+-"1" convert to -1, 1+-1 = 0, 0 convert to "0", concatenate with "2", we get "02"
+console.log(+"1" + "1" + "2");
++"1" convert to +1 but when + "1", +1 become "1" so we get "11", "11" concatenate with "2", so we get "112"
+console.log( "A" - "B" + "2");
+NAN, cause "A" cannot convert to integer or has valueOf(), so "A"-"B" become NaN , NaN + "2" still is NaN
+console.log( "A" - "B" + 2);
+"A"-"B" is NaN, NaN +2 still NaN
+
+Question 2
+You are given a variable “marks”. Your task is to print:
+- AA if the mark is greater than 90
+- AB if the mark is greater than 80 and less than or equal to 90
+- BB if the mark is greater than 70and less than or equal to 80
+- BC if the mark is greater than 60 and less than or equal to 70
+- CC if the mark is greater than 50 and less than or equal to 60
+- CD if the mark is greater than 40 and less than or equal to 50
+- DD if the mark is greater than 30 and less than or equal to 40
+- FF if the mark is less than or equal to 30
+
+var mark = 10
+if(mark > 90){
+    console.log("AA");
+}else if(mark >80 && mark <= 90){
+    console.log("AB");
+}else if(mark >70 && mark <= 80){
+    console.log("BB");
+}else if(mark >60 && mark <= 70){
+    console.log("BC");
+}else if(mark >50 && mark <= 60){
+    console.log("CC");
+}else if(mark >40 && mark <= 50){
+    console.log("CD");
+}else if(mark >30 && mark <= 40){
+    console.log("DD");
+}else{
+    console.log("FF");
+}
